@@ -36,6 +36,16 @@ def generate_ifs_fractal(transformations, iterations=100000):
 
 def plot_fractal(points, title):
     x_vals, y_vals = zip(*points)
-#    plt.figure(figsize
-#::contentReference[oaicite:9]{index=9} GPT STOPPED HERE
+    plt.figure(figsize=(6, 10))
+    plt.scatter(x_vals, y_vals, s=0.2, color="green", marker=".")
+    plt.axis("off")
+    plt.title(title)
+    plt.show()
+
+# Generování a vykreslení fraktálů
+points_model_1 = generate_ifs_fractal(transformations_model_1)
+points_model_2 = generate_ifs_fractal(transformations_model_2)
+
+plot_fractal(points_model_1, "Fraktální kapradina - Model 1")
+plot_fractal(points_model_2, "Fraktální kapradina - Model 2")
  
